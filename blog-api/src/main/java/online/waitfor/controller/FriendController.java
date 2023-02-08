@@ -1,5 +1,6 @@
 package online.waitfor.controller;
 
+import com.alibaba.fastjson2.JSON;
 import online.waitfor.enums.VisitBehavior;
 import online.waitfor.model.vo.Friend;
 import online.waitfor.model.vo.FriendInfo;
@@ -16,11 +17,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @Description: 友链
- * @Author: Naccl
- * @Date: 2020-09-08
- */
 @RestController
 public class FriendController {
 	@Autowired
@@ -51,6 +47,8 @@ public class FriendController {
 	@VisitLogger(VisitBehavior.CLICK_FRIEND)
 	@PostMapping("/friend")
 	public Result addViews(@RequestParam String nickname) {
+//		String json = JSON.toJSONString(nickname);
+//		System.out.println(json);
 		friendService.updateViewsByNickname(nickname);
 		return Result.ok("请求成功");
 	}

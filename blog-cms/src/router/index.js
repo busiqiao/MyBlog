@@ -227,7 +227,7 @@ const routes = [
 	},
 
 	// 404 page must be placed at the end !!!
-	{path: '*', redirect: '/404', hidden: true}
+	{path: '*', redirect: '/dashboard', hidden: true}
 ]
 
 const router = new VueRouter({

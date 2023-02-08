@@ -34,8 +34,8 @@ public class LoginController {
 	@PostMapping("/login")
 	public Result login(@RequestBody LoginInfo loginInfo) {
 		User user = userService.findUserByUsernameAndPassword(loginInfo.getUsername(), loginInfo.getPassword());
-		String json = JSON.toJSONString(loginInfo);
-		System.out.println(json);
+//		String json = JSON.toJSONString(loginInfo);
+//		System.out.println(json);
 
 		if (!"ROLE_admin".equals(user.getRole())) {
 			return Result.create(403, "无权限");

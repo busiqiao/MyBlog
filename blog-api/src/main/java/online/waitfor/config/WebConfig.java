@@ -11,8 +11,8 @@ import online.waitfor.interceptor.AccessLimitInterceptor;
 
 /**
  * @Description: 配置CORS跨域支持、拦截器
- * @Author: Naccl
- * @Date: 2020-07-22
+ * @Author: Waitfor
+ * @Date: 2023-02-10
  */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {

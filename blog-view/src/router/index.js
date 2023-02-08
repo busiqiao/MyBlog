@@ -70,7 +70,8 @@ const routes = [
                 meta: {title: '关于我'}
             }
         ]
-    }
+    },
+    // {path: '*', redirect: '/home', hidden: true}
 ]
 
 const router = new VueRouter({

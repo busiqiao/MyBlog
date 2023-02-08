@@ -21,7 +21,7 @@
         from visitor
         <where>
             <if test="startDate!=null and startDate!='' and endDate!=null and endDate!=''">
-                last_time between #{startDate} and #{endDate}
+#                 last_time between #{startDate} and #{endDate}
             </if>
         </where>
     </select>

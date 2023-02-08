@@ -4,6 +4,7 @@ import 'nprogress/nprogress.css'
 
 const request = axios.create({
 	baseURL: 'http://localhost:8090/',
+	// baseURL: 'http://api.waitfor.online/blog/',
 	timeout: 10000,
 })
 
