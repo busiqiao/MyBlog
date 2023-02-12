@@ -110,14 +110,15 @@ export default {
 		}
 	},
 	created() {
-		this.hintShow1 = localStorage.getItem('txyunHintShow1') ? false : true
-		this.hintShow2 = localStorage.getItem('txyunHintShow2') ? false : true
+		this.hintShow1 = !localStorage.getItem('txyunHintShow1')
+		this.hintShow2 = !localStorage.getItem('txyunHintShow2')
 
 		const txyunConfig = localStorage.getItem('txyunConfig')
 		if (txyunConfig) {
 			this.txyunConfig = JSON.parse(txyunConfig)
 			this.txyunConfig.domain = this.txyunConfig.domain.endsWith('/') ? this.txyunConfig.domain : `${this.txyunConfig.domain}/`
 
+      // 初始化存储桶实例
 			this.cos = new COS({
 				SecretId: this.txyunConfig.secretId,
 				SecretKey: this.txyunConfig.secretKey,
