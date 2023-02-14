@@ -5,7 +5,7 @@ import {Message} from 'element-ui'
 
 const request = axios.create({
 	baseURL: 'http://localhost:8090/admin/',
-	// baseURL: 'http://api.waitfor.online/blog/admin/',
+	// baseURL: 'https://api.waitfor.online/blog/admin/',
 	timeout: 5000
 })
 

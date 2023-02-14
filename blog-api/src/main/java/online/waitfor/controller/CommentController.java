@@ -184,7 +184,10 @@ public class CommentController {
 						if (!tokenBlogId.equals(comment.getBlogId())) {
 							return Result.create(403, "Token不匹配，请重新验证密码！");
 						}
-						commentUtils.setVisitorComment(comment, request);
+						if(!commentUtils.setVisitorComment(comment, request))
+						{
+							return Result.error("评论审核未通过，注意你的言行哦！");
+						}
 						isVisitorComment = true;
 					}
 				} else {//不存在Token则无评论权限
@@ -217,7 +220,10 @@ public class CommentController {
 						if (StringUtils.isEmpty(comment.getNickname(), comment.getEmail()) || comment.getNickname().length() > 15) {
 							return Result.error("参数有误");
 						}
-						commentUtils.setVisitorComment(comment, request);
+						if(!commentUtils.setVisitorComment(comment, request))
+						{
+							return Result.error("评论审核未通过，注意你的言行哦！");
+						}
 						isVisitorComment = true;
 					}
 				} else {
@@ -226,7 +232,10 @@ public class CommentController {
 					if (StringUtils.isEmpty(comment.getNickname(), comment.getEmail()) || comment.getNickname().length() > 15) {
 						return Result.error("参数有误");
 					}
-					commentUtils.setVisitorComment(comment, request);
+					if(!commentUtils.setVisitorComment(comment, request))
+					{
+						return Result.error("评论审核未通过，注意你的言行哦！");
+					}
 					isVisitorComment = true;
 				}
 				break;
