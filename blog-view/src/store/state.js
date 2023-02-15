@@ -21,6 +21,7 @@ export default {
 		content: '',
 		nickname: '',
 		email: '',
+		code: '',
 		website: '',
 		notice: true
 	},

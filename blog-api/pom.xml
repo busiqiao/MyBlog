@@ -12,8 +12,9 @@
     <artifactId>blog-api</artifactId>
     <version>0.0.1</version>
     <name>blog-api</name>
-    <url>https://naccl.top/</url>
+    <url>https://waitfor.online/</url>
     <description>Blog API</description>
+
 
     <properties>
         <java.version>1.8</java.version>
@@ -171,6 +172,7 @@
             <version>2.0.23</version>
         </dependency>
 
+        <!--   百度文本审核api    -->
         <dependency>
             <groupId>com.baidu.aip</groupId>
             <artifactId>java-sdk</artifactId>

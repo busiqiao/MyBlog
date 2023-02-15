@@ -303,8 +303,8 @@ public class CommentUtils {
         String commentCheck = response.getString("conclusion");
         if (commentCheck.equals("不合规") || commentCheck.equals("审核失败")) return false;
 
-        System.out.println(commentCheck);
-        System.out.println(response);
+//        System.out.println(commentCheck);
+//        System.out.println(response);
 
         String nickname = comment.getNickname();
         try {
